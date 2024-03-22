@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <style>
+        html,
+        body,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        div {
+            margin: 0;
+            padding: 0;
+          }
+        * {
+            box-sizing: border-box;
+            vertical-align: middle;
+          }
+
+        .clear {
+            clear: both;
+            }
+
+        body {
+            margin: 0px;
+            }
+
+        .question-wrapper,.choice-wrapper,.answer-wrapper{
+          /* background-color:#00ffff; */
+          width:1000px;
+          height:70px;
+           margin:0 auto;
+           text-align:center;
+           margin-top:50px;
+           
+        }
+
+
+        .choice-wrapper{
+          /* background-color:#00ffff; */
+          width:1000px;
+          height:200px;
+           margin:0 auto;
+           text-align:center;
+           margin-top:50px;
+           
+        }
+        .select-wrapper{
+          width:1000px;
+          height:100px;
+          margin:0 auto;
+          text-align:center;
+          margin-top:100px;
+           
+
+        }
+
+        .question-wrapper{
+          background-color:#00ffff;
+        }
+
+
+
+        .all-wrapper{
+          width:600px
+          height:1500px;
+          /* margin:0 auto; */
+          text-align:center;
+        }
+
+        .selectedButton_a{
+          width:100px;
+          height:50px;
+          margin-left:70px;
+          background-color:#b0c4de;
+        }     
+  </style>
+</head>
+
+<body>
+
+  <div class="all-wrapper">
+        <div class="question-wrapper">
+              <h3>問題</h3>
+              <?=question_data?>; 
+        </div>
+
+        <div class="choice-wrapper">
+            <h3>選択肢</h3>
+            <?=choice_data?>
+
+             <form method="post" action="https://script.google.com/macros/s/AKfycbzdZoBd2ALTWgU7h-9duN_pZSzsnb9LwMv74ERA_JKueSBdNrhU0zwkQkIpL_H5pVxcLQ/exec"  class="select-wrapper">
+                <button  type="checkbox"  class="selectedButton_a" name="selectedButton" value="1">A</button>
+                <button  type="checkbox"  class="selectedButton_a" name="selectedButton" value="2">B</button>
+                <button  type="checkbox"  class="selectedButton_a" name="selectedButton" value="3">C</button>
+                <button  type="checkbox"  class="selectedButton_a" name="selectedButton" value="4">D</button>
+            </form>
+        </div>
+
+        <div class="answer-wrapper">
+            <h3>答え</h3>
+            <?=answer_data?>
+        </div>
+  </div>
+</body>
+</html>
